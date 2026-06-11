@@ -100,23 +100,17 @@ curl -X POST http://localhost:8080/orders/ORD-2026-0001/status \
 
 By default, local mode prints the event to logs. Set `PUBSUB_TOPIC` and Google Application Default Credentials to publish to Pub/Sub.
 
-## Suggested GitHub Repository Description
-
-```text
-Event-driven logistics platform reference architecture on GCP using Cloud Run, API Gateway, Pub/Sub, Cloud Functions, BigQuery, Looker Studio, Terraform, and dashboard analytics.
-```
-
 ## Portfolio Positioning
 
 This project demonstrates the ability to:
 
-1. Translate logistics business requirements into cloud architecture.
-2. Design an event-driven platform for scalable order tracking.
-3. Build a small but realistic API and event processor.
-4. Model analytics in BigQuery for operational dashboards.
-5. Explain security, cost, SLA, and operational considerations.
-6. Present a presales-ready solution blueprint.
+1. Translate logistics business requirements into cloud architecture
+2. Design an event-driven platform for scalable order tracking
+3. Build a small but realistic API and event processor
+4. Model analytics in BigQuery for operational dashboards
+5. Explain security, cost, SLA, and operational considerations
+6. Present a presales-ready solution blueprint
 
 ## Disclaimer
 
-All data is dummy data. No real customer data, credential, API key, or production configuration is included.
+All data is dummy data. No real customer data, credential, API key, or production configuration is included
