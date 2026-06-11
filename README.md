@@ -6,7 +6,7 @@ This repository is designed for **Presales, Cloud Architect, and Solution Archit
 
 ## Business Use Case
 
-A logistics company wants to monitor order status across pickup, in-transit, delayed, delivered, and cancelled states. The business needs near-real-time visibility into delivery performance, delay reasons, SLA achievement, route performance, and branch-level operations.
+A logistics company wants to monitor order status across pickup, in-transit, delayed, delivered, and cancelled states. The business needs near-real-time visibility into delivery performance, delay reasons, SLA achievement, route performance, and branch-level operations
 
 ## Target Architecture
 
