@@ -2,7 +2,7 @@
 
 A portfolio-ready reference architecture for a logistics order-tracking platform using an event-driven pattern on Google Cloud
 
-This repository is designed for **Presales, Cloud Architect, and Solution Architect** portfolios. The value is not only the sample API, but the complete solution package: cloud architecture, event model, Terraform, CI/CD, BigQuery analytics, Looker Studio dashboard guide, cost estimation, and operational runbook.
+This repository is designed for **Presales, Cloud Architect, and Solution Architect** portfolios. The value is not only the sample API, but the complete solution package: cloud architecture, event model, Terraform, CI/CD, BigQuery analytics, Looker Studio dashboard guide, cost estimation, and operational runbook
 
 ## Business Use Case
 
