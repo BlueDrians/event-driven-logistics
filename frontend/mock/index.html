@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logistics Operations Dashboard Mock</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f6f8fb; color: #1f2937; }
+    header { background: #111827; color: white; padding: 24px 40px; }
+    main { padding: 32px 40px; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .card { background: white; border-radius: 14px; padding: 20px; box-shadow: 0 2px 10px rgba(15,23,42,.08); }
+    .kpi { font-size: 32px; font-weight: 700; }
+    table { width: 100%; border-collapse: collapse; margin-top: 24px; background: white; }
+    th, td { padding: 12px 14px; border-bottom: 1px solid #e5e7eb; text-align: left; }
+    th { background: #f3f4f6; }
+    .ok { color: #047857; font-weight: bold; }
+    .warn { color: #b45309; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Event-Driven Logistics Operations</h1>
+    <p>Portfolio mockup for order tracking, SLA monitoring, and delivery performance.</p>
+  </header>
+  <main>
+    <div class="grid">
+      <div class="card"><div>Total Orders</div><div class="kpi">1,248</div></div>
+      <div class="card"><div>Delivered</div><div class="kpi">1,021</div></div>
+      <div class="card"><div>SLA Achievement</div><div class="kpi">92.4%</div></div>
+      <div class="card"><div>Delayed</div><div class="kpi">72</div></div>
+    </div>
+    <table>
+      <thead><tr><th>Order ID</th><th>Route</th><th>Status</th><th>SLA</th><th>Last Update</th></tr></thead>
+      <tbody>
+        <tr><td>ORD-2026-0001</td><td>JKT-BDG</td><td class="ok">IN_TRANSIT</td><td class="ok">On Track</td><td>2026-06-11 09:30</td></tr>
+        <tr><td>ORD-2026-0002</td><td>JKT-SBY</td><td class="warn">DELAYED</td><td class="warn">Breached</td><td>2026-06-11 09:35</td></tr>
+        <tr><td>ORD-2026-0003</td><td>BDG-JKT</td><td class="ok">DELIVERED</td><td class="ok">Met</td><td>2026-06-11 09:42</td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

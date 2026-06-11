@@ -1,0 +1,8 @@
+flowchart LR
+    User[Operations User] --> Gateway[API Gateway]
+    Gateway --> CloudRun[Cloud Run Order API]
+    CloudRun --> PubSub[Pub/Sub logistics-events]
+    PubSub --> Function[Cloud Function Event Processor]
+    Function --> BigQuery[(BigQuery Logistics Analytics)]
+    BigQuery --> Looker[Looker Studio Dashboard]
+    PubSub --> DLQ[Dead Letter Topic]

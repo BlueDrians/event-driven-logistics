@@ -1,0 +1,5 @@
+project_id      = "gcp-project-id"
+region          = "asia-southeast2"
+environment     = "dev"
+budget_amount   = 50
+billing_account = "000000-000000-000000"

@@ -1,0 +1,32 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -t
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/logistics-order-api:$SHORT_SHA
+      - services/order-api
+
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - push
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/logistics-order-api:$SHORT_SHA
+
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - logistics-order-api-${_ENVIRONMENT}
+      - --image=${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/logistics-order-api:$SHORT_SHA
+      - --region=${_REGION}
+      - --platform=managed
+      - --no-allow-unauthenticated
+      - --set-env-vars=GCP_PROJECT_ID=$PROJECT_ID,PUBSUB_TOPIC=logistics-events-${_ENVIRONMENT},PUBLISH_EVENTS=true
+
+substitutions:
+  _REGION: asia-southeast2
+  _REPOSITORY: logistics-platform
+  _ENVIRONMENT: dev
+
+options:
+  logging: CLOUD_LOGGING_ONLY

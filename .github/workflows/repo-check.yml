@@ -1,0 +1,22 @@
+name: Repository Hygiene Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required directories
+        run: |
+          test -d docs
+          test -d infra/terraform
+          test -d sql/bigquery
+          test -d data/sample
+      - name: Check for common secret files
+        run: |
+          ! find . -type f \( -name '.env' -o -name 'credentials.json' -o -name 'service-account.json' -o -name '*.pem' -o -name '*.key' \) | grep .

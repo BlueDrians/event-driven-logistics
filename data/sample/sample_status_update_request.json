@@ -1,0 +1,8 @@
+{
+  "status": "IN_TRANSIT",
+  "branch": "Jakarta Hub",
+  "route": "JKT-BDG",
+  "driver_id": "DRV-001",
+  "sla_minutes": 1440,
+  "actual_minutes": 1325
+}
